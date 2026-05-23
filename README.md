@@ -16,7 +16,7 @@ This is a Spring Boot REST API that manages a product catalog.
 * Gradle
 * Git/GitHub
 
-# BORATORY 8
+# LABORATORY 8
 
 # Database Schema
 
