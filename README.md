@@ -89,6 +89,3 @@ To maintain data integrity, the system applies strict constraints directly to th
 | `GET` | `/api/v1/products` | Public |
 | `POST` | `/api/v1/orders` | Authenticated |
 | `DELETE` | `/api/v1/products/{id}` | ADMIN Only |
-
-
-fix thiss
