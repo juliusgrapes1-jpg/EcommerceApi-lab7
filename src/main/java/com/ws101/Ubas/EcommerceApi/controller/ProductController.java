@@ -1,12 +1,13 @@
-package com.ws101.Ubas.EcommerceApi.controller; 
+package com.ws101.Ubas.EcommerceApi.controller;
 
-import com.ws101.Ubas.EcommerceApi.model.Product; 
-import com.ws101.Ubas.EcommerceApi.service.ProductService; 
+import com.ws101.Ubas.EcommerceApi.model.Product;
+import com.ws101.Ubas.EcommerceApi.service.ProductService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.lang.NonNull;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
-@CrossOrigin(origins = "*") //  Lab 8 Frontend
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/v1/products")
 public class ProductController {
@@ -23,14 +24,14 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Product> getById(@PathVariable Long id) { 
+    public ResponseEntity<Product> getById(@PathVariable @NonNull Long id) {
         return productService.getProductById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
-    
+
     @PostMapping
-    public Product createProduct(@RequestBody Product product) {
+    public Product createProduct(@RequestBody @NonNull Product product) {
         return productService.addProduct(product);
     }
 }

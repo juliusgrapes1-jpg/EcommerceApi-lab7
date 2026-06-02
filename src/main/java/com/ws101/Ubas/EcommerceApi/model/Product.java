@@ -14,7 +14,7 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id; // This replaces the String id for the database
+    private Long id;
 
     private String name;
     private String description;
