@@ -1,3 +1,6 @@
+Mar Julius B. Ubas
+Kent Cedrick Celajes 
+
 #  LAB 7 Ecommerce API Lab
 
 This is a Spring Boot REST API that manages a product catalog.
